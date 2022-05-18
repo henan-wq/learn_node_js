@@ -1,4 +1,5 @@
 // JavaScript的Array可以包含任意数据类型，并通过索引来访问每个元素。
+// length属性是Array的长度。
 var arr = [1, 2, 3.14, 'Hello', null, true];
 arr.length; // 6
 
@@ -11,3 +12,4 @@ arr.length = 2;
 arr; // (2) [1, 2]
 arr.length = 3;
 arr; // (3) [1, 2, empty]
+
