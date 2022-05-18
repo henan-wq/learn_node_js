@@ -1,4 +1,17 @@
-弹出对话框，显示Hello, world：  
+赋值语句：  
+
 ```
-alert('Hello, world'); 
+var x = 1;
+```
+
+字符串：  
+
+```
+'Hello, world';
+```
+
+一行代码包含两个语句：
+
+```
+var x = 1; var y = 2;
 ```
