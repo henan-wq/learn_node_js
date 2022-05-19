@@ -42,3 +42,4 @@ var aCopy = arr.slice();
 aCopy; // (7) ['A', 'B', 'C', 'D', 'E', 'F', 'G']
 arr; // (7) ['A', 'B', 'C', 'D', 'E', 'F', 'G']
 aCopy === arr; // false
+test
