@@ -43,6 +43,9 @@ aCopy; // (7) ['A', 'B', 'C', 'D', 'E', 'F', 'G']
 arr; // (7) ['A', 'B', 'C', 'D', 'E', 'F', 'G']
 aCopy === arr; // false
 
+// push()与pop()
+// push() 向Array数组的末尾添加若干元素，pop()则把Array的最后一个元素删除掉：
+
 var arr = [1, 2];
 // undefined
 arr.push('A', 'B');
@@ -61,5 +64,27 @@ arr;
 // 返回空数组[]
 arr.pop();
 // undefined 空数组继续pop不会报错，而是返回undefined
+arr;
+// []
+
+// unshift()与shift()
+// unshift()可以向Array的头部添加若干元素，shift()则把Array的第一个元素删掉：
+
+var arr = [1, 2];
+// undefined
+arr.unshift('A', 'B'); // 返回Array新的长度：4
+// 4
+arr;
+// (4) ['A', 'B', 1, 2]
+arr.shift();
+// 'A'
+arr;
+// (3) ['B', 1, 2]
+arr.shift(); arr.shift(); arr.shift(); 
+// 2
+arr;
+// []
+arr.shift();
+// undefined
 arr;
 // []
