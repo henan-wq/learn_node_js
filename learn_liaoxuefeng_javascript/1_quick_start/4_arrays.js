@@ -30,3 +30,9 @@ arr.indexOf('30'); // 2
 arr.indexOf('xyz'); // 3
 arr.indexOf(NaN); // 试了以下居然是-1
 arr.indexOf(0); // -1 没找到的返回-1
+
+// slice() 对应String的substring()版本，它截取Array的部分元素，然后返回一个新的Array：
+var arr = ['A', 'B', 'C', 'D', 'E', 'F', 'G'];
+arr.slice(0, 3); // (3) ['A', 'B', 'C'] 从索引0开始，到索引3结束，但不包括索引3
+
+
