@@ -117,3 +117,53 @@ arr; // (3) ['Microsoft', 'Apple', 'Oracle']
 // 只添加，不删除
 arr.splice(2, 0, 'Google', 'Facebook'); // []
 arr; // (5) ['Microsoft', 'Apple', 'Google', 'Facebook', 'Oracle']
+
+
+// concat()方法把当前的Array和另一个Array连接起来，并返回一个新的Array。
+var arr = ['A', 'B', 'C']; // undefined
+var added = arr.concat([1, 2, 3]); // undefined
+added; // (6) ['A', 'B', 'C', 1, 2, 3]
+arr; // (3) ['A', 'B', 'C']
+
+// concat()方法可以接受任意个元素和Array，并且自动把Array拆开，然后全部添加到一个新返回的Array里
+var arr = ['A', 'B', 'C']; // undefined
+arr.concat(1, 2, [3, 4]); // (7) ['A', 'B', 'C', 1, 2, 3, 4]
+
+// join() 方法是一个非常实用的方法，它把目前Array的每个元素都用指定的字符串连接起来，
+// 然后返回连接后的字符串:
+// 如果Array的元素不是字符串，将自动转换为字符串后再连接
+var arr = ['A', 'B', 'C', 1, 2, 3]; // undefined
+arr; // (6) ['A', 'B', 'C', 1, 2, 3]
+arr.join('-'); // 'A-B-C-1-2-3'
+
+// 多维数组
+// 如果数组的某个元素又是一个Array()，则可以形成多维数组：
+var arr= [[1, 2, 3], [400, 500, 600], '=']; // undefined
+arr;
+// (3) [Array(3), Array(3), '=']
+    // 0: (3) [1, 2, 3]
+    // 1: (3) [400, 500, 600]
+    // 2: "="
+    // length: 3
+    // [[Prototype]]: Array(0)
+
+// 练习：如何通过索引取到500这个值：
+'use strict';
+var arr = [[1, 2, 3], [400, 500, 600], '-'];
+var x = arr[1][1]; // 数组的元素可以通过索引来访问。请注意，索引的起始值为0：
+console.log(x); // x应该为500
+
+// 小结
+// Array提供了一种顺序存储一组元素的功能，并可以按索引来读写。
+// 练习：在新生欢迎会上，你已经拿到了新同学的名单，请排序后显示：欢迎XXX，XXX，XXX和XXX同学！：
+
+'use strict';
+var arr = ['小明', '小红', '大军', '阿黄'];
+arr.sort(); // 默认排序
+var name0 = arr[0];
+var name1 = arr[1];
+var name2 = arr[2];
+var name3 = arr[3];
+var message = `欢迎${name0}，${name1}，${name2}和${name3}同学！`;
+console.log(message);
+// 欢迎大军，小明，小红和阿黄同学！
