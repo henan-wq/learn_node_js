@@ -88,3 +88,32 @@ arr.shift();
 // undefined
 arr;
 // []
+
+var arr = ['B', 'C', 'A'];
+// undefined
+arr.sort();
+(3) ['A', 'B', 'C']
+// 按默认顺序排序
+
+var arr = ['one', 'two', 'three'];
+undefined
+arr.reverse();
+(3) ['three', 'two', 'one']
+// 反转
+
+// splice
+var arr = ['Microsoft', 'Apple', 'Yahoo', 'AOL', 'Excite', 'Oracle'];
+
+arr.splice(2, 3, 'Google', 'Facebook'); // 从索引2开始删除3个元素，然后再添加两个元素
+// (3) ['Yahoo', 'AOL', 'Excite']
+// 返回删除的元素
+
+arr; // (5) ['Microsoft', 'Apple', 'Google', 'Facebook', 'Oracle']
+
+// 只删除，不添加
+arr.splice(2, 2); // (2) ['Google', 'Facebook']
+arr; // (3) ['Microsoft', 'Apple', 'Oracle']
+
+// 只添加，不删除
+arr.splice(2, 0, 'Google', 'Facebook'); // []
+arr; // (5) ['Microsoft', 'Apple', 'Google', 'Facebook', 'Oracle']
