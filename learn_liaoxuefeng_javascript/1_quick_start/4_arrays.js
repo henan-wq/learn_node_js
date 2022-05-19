@@ -42,4 +42,24 @@ var aCopy = arr.slice();
 aCopy; // (7) ['A', 'B', 'C', 'D', 'E', 'F', 'G']
 arr; // (7) ['A', 'B', 'C', 'D', 'E', 'F', 'G']
 aCopy === arr; // false
-test
+
+var arr = [1, 2];
+// undefined
+arr.push('A', 'B');
+// 4
+arr;
+// (4) [1, 2, 'A', 'B']0: 11: 22: "A"3: "B"length: 4[[Prototype]]: Array(0)
+arr.pop();
+// 'B'
+arr;
+// (3) [1, 2, 'A']
+arr.pop();
+// pop()返回 'A'
+arr.pop(); arr.pop();
+// pop()返回 1
+arr;
+// 返回空数组[]
+arr.pop();
+// undefined 空数组继续pop不会报错，而是返回undefined
+arr;
+// []
