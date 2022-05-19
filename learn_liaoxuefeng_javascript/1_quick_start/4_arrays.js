@@ -34,5 +34,11 @@ arr.indexOf(0); // -1 没找到的返回-1
 // slice() 对应String的substring()版本，它截取Array的部分元素，然后返回一个新的Array：
 var arr = ['A', 'B', 'C', 'D', 'E', 'F', 'G'];
 arr.slice(0, 3); // (3) ['A', 'B', 'C'] 从索引0开始，到索引3结束，但不包括索引3
+arr.slice(3); // (4) ['D', 'E', 'F', 'G'] 从索引3开始，到结束
 
-
+// 如果不给slice() 传递任何参数，它会从头到尾截取所有元素：
+var arr = ['A', 'B', 'C', 'D', 'E', 'F', 'G'];
+var aCopy = arr.slice();
+aCopy; // (7) ['A', 'B', 'C', 'D', 'E', 'F', 'G']
+arr; // (7) ['A', 'B', 'C', 'D', 'E', 'F', 'G']
+aCopy === arr; // false
