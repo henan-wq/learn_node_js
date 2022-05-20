@@ -48,4 +48,4 @@ delete xiaoming.age; // true
 xiaoming.age; // undefined
 delete xiaoming['name']; // true
 xiaoming.name; // undefined
-delete xiaoming.school; // true
+delete xiaoming.school; // true （删除一个不存在的属性也不会报错）
