@@ -49,3 +49,27 @@ xiaoming.age; // undefined
 delete xiaoming['name']; // true
 xiaoming.name; // undefined
 delete xiaoming.school; // true （删除一个不存在的属性也不会报错）
+
+// 检测xiaoming是否拥有某一属性，可以用in操作符：
+var xiaoming = {
+    name: '',
+    birth: 1990,
+    school: 'No.1 Middle School',
+    height: 1.70,
+    weight: 65,
+    score: null
+};
+'name' in xiaoming; // true
+'grade' in xiaoming; // false
+
+// 如果in判断一个属性的存在，这个属性不一定是xiaoming的，它可能是xiaoming继承得到的：
+'toString' in xiaoming; // true
+
+// 因为toString定义在object对象中，而所有对象最终都会在原型链上指向object，所以xiaoming也拥有toString属性。
+
+// 判断一个属性是否是xiaoming自身拥有的，而不是继承得到的，可以用hasOwnProperty()方法：
+var xiaoming = {
+    name: '小明'
+};
+xiaoming.hasOwnProperty('name'); // true
+xiaoming.hasOwnProperty('toString'); // false
