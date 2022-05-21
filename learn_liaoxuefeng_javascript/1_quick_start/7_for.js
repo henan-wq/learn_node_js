@@ -91,3 +91,77 @@ for (var i in a) {
     console.log(a[i]); // 'A', 'B', 'C'
 }
 // 注意：for ... in 对 Array 的循环得到的是String而不是Number
+
+// while
+// for 循环在已知循环的初始和结束条件时非常有用，上述忽略了条件的for循环容易让人
+// 看不清循环的逻辑，此时用while循环更佳。
+
+/*while循环只有一个判断条件，条件满足，就不断循环，条件不满足时则退出循环。
+比如计算100以内所有奇数之和，可以用while：*/
+var x = 0;
+var n = 99;
+while (n > 0) {
+    x = x + n;
+    n = n - 2;
+}
+x; // 2500
+
+
+/*do while
+最后一种循环是do { ... } while()循环，它和while循环唯一的区别是，不是在每次
+循环开始的时候判断条件，而是在每次循环完成的时候判断条件：*/
+var n = 0;
+do {
+    n = n + 1;
+} while (n < 100);
+n; // 100
+
+/*练习
+请利用循环遍历数组中的每个名字，并显示Hello, xxx!
+*/
+'use strict';
+var arr = ['Bart', 'Lisa', 'Adam'];
+var i, x;
+for (i=0; i<arr.length; i++) {
+    x = arr[i];
+    console.log(x);
+}
+
+// 省略for循环的条件，用if判断来退出循环：
+'use strict';
+var arr = ['Bart', 'Lisa', 'Adam'];
+var i, x;
+i = 0;
+for (;;) {
+    if (i>=arr.length) {
+        break;
+    }
+    x = arr[i];
+    console.log(x);
+    i ++;
+}
+
+//for ... in的写法：
+'use strict';
+var arr = ['Bart', 'Lisa', 'Adam'];
+for (var i in arr) {
+    console.log(arr[i]);
+}
+
+// while写法：
+'use strict';
+var arr = ['Bart', 'Lisa', 'Adam'];
+var i = 0;
+while (i < arr.length) {
+    console.log(arr[i]);
+    i = i + 1;
+}
+
+// do ... while解法：
+'use strict';
+var arr = ['Bart', 'Lisa', 'Adam'];
+var n = 0;
+do {
+    console.log(arr[n]);
+    n = n + 1;
+} while (n < arr.length);
