@@ -27,3 +27,45 @@ if (x === 3628800) {
 else {
     console.log('计算错误');
 }
+
+// for循环最常用的地方是利用索引来遍历数组：
+var arr = ['Apple', 'Google', 'Microsoft'];
+var i, x;
+for (i=0; i<arr.length; i++) {
+    x = arr[i];
+    console.log(x);
+}
+/*
+输出如下：
+Apple
+Google
+Microsoft
+*/
+
+//for循环的3个条件都是可以省略的，如果没有推出循环的判断条件，就必须用break语句推出循环，否则就是死循环：
+var x = 0;
+for (;;) { // 将无限循环下去
+    if (x > 100) {
+        break; // 通过if判断来退出循环
+    }
+    x ++;
+}
+x; // 101
+
+
+/* for ... in
+for 循环的一个变体是for ... in 循环，它可以把一个对象的所有属性依次循环出来：
+*/
+var o = {
+    name: 'Jack',
+    age: 20,
+    city: 'Beijing'
+};
+for (var key in o) { // 还不清楚这个key为什么有这个作用，先跳过
+    console.log(key);
+}
+/* 输出如下：
+name
+age
+city
+*/
