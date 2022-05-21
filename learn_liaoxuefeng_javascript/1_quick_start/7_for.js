@@ -90,3 +90,4 @@ for (var i in a) {
     console.log(i); // '0', '1', '2'
     console.log(a[i]); // 'A', 'B', 'C'
 }
+// 注意：for ... in 对 Array 的循环得到的是String而不是Number
