@@ -179,5 +179,48 @@ foo(1);
 请用rest参数编写一个sum()函数，接受任意个参数并返回它们的和：*/
 'use strict';
 function sum(...rest) {
-    ???
+    var sum = 0;
+    for (var i=0; i<rest.length; i++) {
+        sum = sum + rest[i];
+    }
+    return sum;
 }
+
+// --------------------------------------------------
+
+/*
+小心你的return语句
+
+JavaScript引擎有一个在行末自动添加分号的机制，一个大坑：
+*/
+function foo() {
+    return { name: 'foo' };
+}
+
+foo(); // { name: 'foo' }
+
+// --------------------------------------------------
+
+// 如果把return语句拆成两行：
+function foo() {
+    return
+        { name: 'foo' };
+}
+
+foo(); // undefined
+/* 由于JavaScript引擎的机制，上面的代码实际变成了：*/
+function foo() {
+    return; // 自动添加了分号，相当于return undefined;
+        { name: 'foo' }; // 这行语句已经没法执行到了
+}
+
+
+// 所以，如果要写多行，可以这么写：
+function foo() {
+    return {
+        name: 'foo'
+    };
+}
+
+// --------------------------------------------------
+
