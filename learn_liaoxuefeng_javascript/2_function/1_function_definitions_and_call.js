@@ -177,6 +177,7 @@ foo(1);
 /* 因为rest参数是ES6新标准，所以需要测试一下浏览器是否支持。
 
 请用rest参数编写一个sum()函数，接受任意个参数并返回它们的和：*/
+// 注：这是参考了别人的答案写的：
 'use strict';
 function sum(...rest) {
     var sum = 0;
@@ -224,3 +225,19 @@ function foo() {
 
 // --------------------------------------------------
 
+/*
+练习
+定义一个计算圆面积的函数“area_of_circle()”，它有两个参数：
+r：表示圆的半径；
+pi：表示π的值，如果不传，则默认3.14
+*/
+'use strict';
+function area_of_circle(r, pi) {
+    var s;
+    var PI = 3.14;
+    if (arguments.length === 2) {
+        PI = arguments[1];
+    }
+    s = r * r * PI;
+    return s;
+}
